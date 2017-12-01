@@ -10,9 +10,9 @@ db_name ='Cheaa_Info_Data' #数据库名
 db = client[db_name]
 # set=db.Cheaa_Info_Items
 
-##测试数据库是否连接（查全部数据）
-# for i in set.find():
-#     print(i)
+#测试数据库是否连接（查全部数据）
+for i in set.find():
+    print(i)
 
 #从mongoDB数据库中读取Cheaa_Info_Data数据写到CSV文件里面
 def WriteCheaaCsv():
