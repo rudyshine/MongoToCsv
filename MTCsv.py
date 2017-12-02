@@ -26,7 +26,7 @@ db = client[db_name]
 #         vList = []
 #         for k in headList:
 #             vList.append(info[k])
-#             writer.writerow(vList)
+#         writer.writerow(vList)
 #
 # WriteCheaaCsv()
 
@@ -38,8 +38,8 @@ def WriteCheaaCsv():
         infoName=info['Title']
         print(infoName)
         File = codecs.open('%s.doc'%infoName,'w')  ##建立并打开文件
-        writer = csv.writer(File)  ##写入文件
-        writer.writerow(headList)  ##写入 标题
+        writer = csv.writer(File)
+        writer.writerow(headList)
         for k in headList:
             vList.append(info[k])
             writer.writerow(vList)
