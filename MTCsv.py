@@ -29,6 +29,7 @@ def WriteCheaaCsv():
 
 WriteCheaaCsv()
 
+print('zz')
 # #从mongoDB数据库中读取Cheaa_Info_Data数据写到doc文件里面,一条记录一个文件
 # def WriteCheaaCsv():
 #     for info in db.Cheaa_Info_Items.find():  ##查到数据库里全部的数据
