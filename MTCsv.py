@@ -68,10 +68,11 @@ set=db.Cheaa_Info_Items
 def WriteCheaaCsv():
     date='2018-01-02'
     File=codecs.open('Cheaa_Info_Data %s.csv'%date,'w')  ##建立并打开文件
-    headList=['LinkUrl','ArtcleContent','Title','Time','InfoFrom', 'startUrl','ProgramStarttime']  ##表头
+    headList=['Title','ArtcleContent','LinkUrl','Time','InfoFrom', 'startUrl','ProgramStarttime']  ##表头
     writer=csv.writer(File)   ##写入文件
     writer.writerow(headList)  ##写入 标题
-    for info in set.find({'ProgramStarttime':re.compile(date)}):##查到数据库里全部的数据
+    # for info in set.find({'ProgramStarttime':re.compile(date)}):##按条件查找数据
+    for info in set.find():##查到数据库里全部的数据
         vList = []
         for k in headList:
             text = ''.join(info[k])
